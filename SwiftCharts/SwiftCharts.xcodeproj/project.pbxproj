@@ -11,6 +11,8 @@
 		29F1B822285E2DB3008BBFAE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F1B821285E2DB3008BBFAE /* ContentView.swift */; };
 		29F1B824285E2DB4008BBFAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29F1B823285E2DB4008BBFAE /* Assets.xcassets */; };
 		29F1B827285E2DB4008BBFAE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29F1B826285E2DB4008BBFAE /* Preview Assets.xcassets */; };
+		29F1B830285E2ECA008BBFAE /* SiteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F1B82F285E2ECA008BBFAE /* SiteView.swift */; };
+		29F1B832285E3033008BBFAE /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F1B831285E3033008BBFAE /* Home.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		29F1B821285E2DB3008BBFAE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		29F1B823285E2DB4008BBFAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		29F1B826285E2DB4008BBFAE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		29F1B82F285E2ECA008BBFAE /* SiteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteView.swift; sourceTree = "<group>"; };
+		29F1B831285E3033008BBFAE /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +55,8 @@
 		29F1B81E285E2DB3008BBFAE /* SwiftCharts */ = {
 			isa = PBXGroup;
 			children = (
+				29F1B82D285E2EA3008BBFAE /* View */,
+				29F1B82E285E2EAD008BBFAE /* Model */,
 				29F1B81F285E2DB3008BBFAE /* SwiftChartsApp.swift */,
 				29F1B821285E2DB3008BBFAE /* ContentView.swift */,
 				29F1B823285E2DB4008BBFAE /* Assets.xcassets */,
@@ -65,6 +71,22 @@
 				29F1B826285E2DB4008BBFAE /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		29F1B82D285E2EA3008BBFAE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				29F1B831285E3033008BBFAE /* Home.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		29F1B82E285E2EAD008BBFAE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				29F1B82F285E2ECA008BBFAE /* SiteView.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +159,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29F1B830285E2ECA008BBFAE /* SiteView.swift in Sources */,
 				29F1B822285E2DB3008BBFAE /* ContentView.swift in Sources */,
+				29F1B832285E3033008BBFAE /* Home.swift in Sources */,
 				29F1B820285E2DB3008BBFAE /* SwiftChartsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
