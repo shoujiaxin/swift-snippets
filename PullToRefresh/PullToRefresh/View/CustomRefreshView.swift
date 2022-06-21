@@ -7,14 +7,35 @@
 
 import SwiftUI
 
-struct CustomRefreshView: View {
+struct CustomRefreshView<Content: View>: View {
+    let showsIndicators: Bool
+
+    let lottieFileName: String
+
+    let content: Content
+
+    let onRefresh: () async -> Void
+
+    init(showsIndicators: Bool = false, lottieFileName: String = "Loading", @ViewBuilder content: () -> Content, onRefresh: @escaping () -> Void) {
+        self.showsIndicators = showsIndicators
+        self.lottieFileName = lottieFileName
+        self.content = content()
+        self.onRefresh = onRefresh
+    }
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView(.vertical, showsIndicators: showsIndicators) {
+            content
+        }
     }
 }
 
 struct CustomRefreshView_Previews: PreviewProvider {
     static var previews: some View {
-        CustomRefreshView()
+        CustomRefreshView(showsIndicators: false, lottieFileName: "Loading") {
+            Rectangle()
+                .fill(.red)
+                .frame(height: 200)
+        } onRefresh: {}
     }
 }
