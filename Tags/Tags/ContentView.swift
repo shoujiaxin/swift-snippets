@@ -30,15 +30,17 @@ struct ContentView: View {
                 .pickerStyle(.segmented)
                 .padding(.bottom, 20)
 
-                TagView(alignment: alignmentValue == 0 ? .leading : alignmentValue == 1 ? .center : .trailing, spacing: 20) {
-                    ForEach($tags) { $tag in
-                        Toggle(tag.name, isOn: $tag.isSelected)
-                            .toggleStyle(.button)
-                            .buttonStyle(.bordered)
-                            .tint(tag.isSelected ? .red : .gray)
+                ScrollView {
+                    TagView(alignment: alignmentValue == 0 ? .leading : alignmentValue == 1 ? .center : .trailing, spacing: 20) {
+                        ForEach($tags) { $tag in
+                            Toggle(tag.name, isOn: $tag.isSelected)
+                                .toggleStyle(.button)
+                                .buttonStyle(.bordered)
+                                .tint(tag.isSelected ? .red : .gray)
+                        }
                     }
+                    .animation(.interactiveSpring(response: 0.5, dampingFraction: 0.6, blendDuration: 0.6), value: alignmentValue)
                 }
-                .animation(.interactiveSpring(response: 0.5, dampingFraction: 0.6, blendDuration: 0.6), value: alignmentValue)
 
                 HStack {
                     TextField("Tag", text: $text, axis: .vertical)
