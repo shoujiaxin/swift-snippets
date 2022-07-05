@@ -31,50 +31,56 @@ struct ContentView: View {
         .ignoresSafeArea()
         .overlay {
             indexView
-                .frame(maxWidth: 240, maxHeight: .infinity, alignment: .bottom)
+                .padding(.horizontal, 100)
         }
     }
 
     private var indexView: some View {
-        ScrollViewReader { proxy in
-            ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing: 18) {
-                    Spacer()
+        GeometryReader { geometryProxy in
+            ScrollViewReader { scrollProxy in
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: 18) {
+                        Spacer()
 
-                    ForEach(colors.indices, id: \.self) { index in
-                        Circle()
-                            .fill(colors[index])
-                            .frame(width: 32, height: 32)
-                            .id(index)
-                            .overlay {
-                                if selected == index {
-                                    Image(systemName: "checkmark")
-                                        .font(.system(size: 18, weight: .bold))
-                                        .foregroundColor(.white)
+                        ForEach(colors.indices, id: \.self) { index in
+                            Circle()
+                                .fill(colors[index])
+                                .frame(width: 32, height: 32)
+                                .scaleEffect(selected == index ? 1.2 : 1.0)
+                                .id(index)
+                                .overlay {
+                                    if selected == index {
+                                        Image(systemName: "checkmark")
+                                            .font(.system(size: 18, weight: .bold))
+                                            .foregroundColor(.white)
+                                    }
                                 }
-                            }
-                            .onTapGesture {
-                                withAnimation {
-                                    selected = index
+                                .onTapGesture {
+                                    UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                                    withAnimation {
+                                        selected = index
+                                    }
                                 }
-                            }
+                        }
+
+                        Spacer()
                     }
-
-                    Spacer()
+                    .padding(.vertical)
+                    .frame(minWidth: geometryProxy.size.width)
                 }
-                .padding(.vertical)
-            }
-            .background {
-                Capsule()
-                    .fill(Color("AccentColor"))
-            }
-            .clipShape(Capsule())
-            .shadow(radius: 8)
-            .onChange(of: selected) { newValue in
-                withAnimation {
-                    proxy.scrollTo(newValue, anchor: .center)
+                .background {
+                    Capsule()
+                        .fill(Color("AccentColor"))
+                }
+                .clipShape(Capsule())
+                .shadow(radius: 8)
+                .onChange(of: selected) { newValue in
+                    withAnimation {
+                        scrollProxy.scrollTo(newValue, anchor: .center)
+                    }
                 }
             }
+            .frame(maxHeight: .infinity, alignment: .bottom)
         }
     }
 }
