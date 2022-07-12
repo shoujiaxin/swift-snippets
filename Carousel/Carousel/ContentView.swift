@@ -9,11 +9,31 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        TabView {
+            GeometryReader { proxy in
+                let topEdge = proxy.safeAreaInsets.top
+                ForYou(topEdge: topEdge)
+                    .padding(.top, topEdge)
+                    .ignoresSafeArea(.all, edges: .top)
+            }
+            .tabItem {
+                Label("For You", systemImage: "rectangle.portrait")
+            }
+
+            Text("Search")
+                .tabItem {
+                    Label("Search", systemImage: "magnifyingglass")
+                }
+
+            Text("Following")
+                .tabItem {
+                    Label("Following", systemImage: "bookmark")
+                }
+
+            Text("Downloads")
+                .tabItem {
+                    Label("Downloads", systemImage: "square.and.arrow.down")
+                }
         }
     }
 }

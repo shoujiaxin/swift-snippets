@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "transcode.jpeg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
