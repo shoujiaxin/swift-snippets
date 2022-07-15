@@ -11,6 +11,7 @@
 		29F0EE57288198AA003D79AB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F0EE56288198AA003D79AB /* ContentView.swift */; };
 		29F0EE59288198B1003D79AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29F0EE58288198B1003D79AB /* Assets.xcassets */; };
 		29F0EE5C288198B1003D79AB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29F0EE5B288198B1003D79AB /* Preview Assets.xcassets */; };
+		29F0EE6528819A5C003D79AB /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F0EE6428819A5C003D79AB /* Tab.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		29F0EE56288198AA003D79AB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		29F0EE58288198B1003D79AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		29F0EE5B288198B1003D79AB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		29F0EE6428819A5C003D79AB /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,8 @@
 		29F0EE53288198AA003D79AB /* DynamicTabIndicator */ = {
 			isa = PBXGroup;
 			children = (
+				29F0EE63288199BE003D79AB /* Model */,
+				29F0EE62288199B9003D79AB /* View */,
 				29F0EE54288198AA003D79AB /* DynamicTabIndicatorApp.swift */,
 				29F0EE56288198AA003D79AB /* ContentView.swift */,
 				29F0EE58288198B1003D79AB /* Assets.xcassets */,
@@ -65,6 +69,21 @@
 				29F0EE5B288198B1003D79AB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		29F0EE62288199B9003D79AB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		29F0EE63288199BE003D79AB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				29F0EE6428819A5C003D79AB /* Tab.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +156,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29F0EE6528819A5C003D79AB /* Tab.swift in Sources */,
 				29F0EE57288198AA003D79AB /* ContentView.swift in Sources */,
 				29F0EE55288198AA003D79AB /* DynamicTabIndicatorApp.swift in Sources */,
 			);
