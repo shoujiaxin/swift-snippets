@@ -11,6 +11,7 @@
 		291BDCAA2884396500A89EE1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291BDCA92884396500A89EE1 /* ContentView.swift */; };
 		291BDCAC2884396600A89EE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 291BDCAB2884396600A89EE1 /* Assets.xcassets */; };
 		291BDCAF2884396600A89EE1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 291BDCAE2884396600A89EE1 /* Preview Assets.xcassets */; };
+		297FC01828846DF400DD6105 /* LineGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297FC01728846DF400DD6105 /* LineGraph.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		291BDCA92884396500A89EE1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		291BDCAB2884396600A89EE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		291BDCAE2884396600A89EE1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		297FC01728846DF400DD6105 /* LineGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineGraph.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,8 @@
 		291BDCA62884396500A89EE1 /* CustomLineGraph */ = {
 			isa = PBXGroup;
 			children = (
+				291BDCB628843AF400A89EE1 /* Model */,
+				291BDCB528843AF000A89EE1 /* View */,
 				291BDCA72884396500A89EE1 /* CustomLineGraphApp.swift */,
 				291BDCA92884396500A89EE1 /* ContentView.swift */,
 				291BDCAB2884396600A89EE1 /* Assets.xcassets */,
@@ -65,6 +69,21 @@
 				291BDCAE2884396600A89EE1 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		291BDCB528843AF000A89EE1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				297FC01728846DF400DD6105 /* LineGraph.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		291BDCB628843AF400A89EE1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				291BDCAA2884396500A89EE1 /* ContentView.swift in Sources */,
+				297FC01828846DF400DD6105 /* LineGraph.swift in Sources */,
 				291BDCA82884396500A89EE1 /* CustomLineGraphApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
