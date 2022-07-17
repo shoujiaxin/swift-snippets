@@ -22,7 +22,7 @@ struct CryptoModel: Identifiable, Codable {
 
     let priceChange: Double
 
-    let last7DaysPrice: [GraphModel]
+    let last7DaysPrice: GraphModel
 
     enum CodingKeys: String, CodingKey {
         case id
@@ -30,7 +30,7 @@ struct CryptoModel: Identifiable, Codable {
         case name
         case image
         case currentPrice = "current_price"
-        case lastUpdated = "last_update"
+        case lastUpdated = "last_updated"
         case priceChange = "price_change_percentage_24h"
         case last7DaysPrice = "sparkline_in_7d"
     }

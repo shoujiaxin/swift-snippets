@@ -13,6 +13,7 @@
 		299E959828840879008A0057 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 299E959728840879008A0057 /* Preview Assets.xcassets */; };
 		299E95A128840A4C008A0057 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299E95A028840A4C008A0057 /* Home.swift */; };
 		29D78E5428842409007A9632 /* CryptoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D78E5328842409007A9632 /* CryptoModel.swift */; };
+		29D78E5728842D4C007A9632 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D78E5628842D4C007A9632 /* AppViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		299E959728840879008A0057 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		299E95A028840A4C008A0057 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		29D78E5328842409007A9632 /* CryptoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoModel.swift; sourceTree = "<group>"; };
+		29D78E5628842D4C007A9632 /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 		299E958F28840876008A0057 /* CryptoApp */ = {
 			isa = PBXGroup;
 			children = (
+				29D78E5528842D33007A9632 /* ViewModel */,
 				299E959F288409D3008A0057 /* Model */,
 				299E959E288409CF008A0057 /* View */,
 				299E959028840876008A0057 /* CryptoAppApp.swift */,
@@ -87,6 +90,14 @@
 				29D78E5328842409007A9632 /* CryptoModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		29D78E5528842D33007A9632 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				29D78E5628842D4C007A9632 /* AppViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,6 +170,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29D78E5728842D4C007A9632 /* AppViewModel.swift in Sources */,
 				299E959328840876008A0057 /* ContentView.swift in Sources */,
 				299E95A128840A4C008A0057 /* Home.swift in Sources */,
 				29D78E5428842409007A9632 /* CryptoModel.swift in Sources */,

@@ -5,6 +5,7 @@
 //  Created by Jiaxin Shou on 2022/7/17.
 //
 
+import Charts
 import SwiftUI
 
 struct Home: View {
@@ -12,30 +13,37 @@ struct Home: View {
 
     @Namespace private var animation
 
+    @StateObject private var viewModel: AppViewModel = .init()
+
     var body: some View {
         VStack {
-            HStack(spacing: 15) {
-                Circle()
-                    .fill(.red)
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 50, height: 50)
+            if let coins = viewModel.coins, let coin = viewModel.currentCoin {
+                HStack(spacing: 15) {
+                    Circle()
+                        .fill(.red)
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 50, height: 50)
 
-                VStack(alignment: .leading, spacing: 5) {
-                    Text("Bitcoin")
-                        .font(.callout)
+                    VStack(alignment: .leading, spacing: 5) {
+                        Text("Bitcoin")
+                            .font(.callout)
 
-                    Text("BTC")
-                        .font(.caption)
-                        .foregroundColor(.gray)
+                        Text("BTC")
+                            .font(.caption)
+                            .foregroundColor(.gray)
+                    }
                 }
+                .frame(maxWidth: .infinity, alignment: .leading)
+
+                segmentedControl
+
+                graphView(coin: coin)
+
+                controls
+            } else {
+                ProgressView()
+                    .tint(Color("LightGreen"))
             }
-            .frame(maxWidth: .infinity, alignment: .leading)
-
-            segmentedControl
-
-            graphView
-
-            controls
         }
         .padding()
     }
@@ -72,8 +80,16 @@ struct Home: View {
         .padding(.vertical)
     }
 
-    private var graphView: some View {
+    private func graphView(coin: CryptoModel) -> some View {
         GeometryReader { _ in
+            Chart(coin.last7DaysPrice.price.indices, id: \.self) { index in
+                LineMark(x: .value("X", index), y: .value("Y", coin.last7DaysPrice.price[index]))
+                    .foregroundStyle(Color.accentColor)
+
+                AreaMark(x: .value("X", index), y: .value("Y", coin.last7DaysPrice.price[index]))
+                    .foregroundStyle(Color.accentColor.opacity(0.1).gradient)
+            }
+            .chartXAxis(.hidden)
         }
         .padding(.vertical, 30)
         .padding(.bottom, 20)
