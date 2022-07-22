@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		298594A3288AABC8006F17E7 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298594A2288AABC8006F17E7 /* Album.swift */; };
+		298594A5288ACBAA006F17E7 /* StackPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298594A4288ACBAA006F17E7 /* StackPlayerView.swift */; };
+		298594A7288AD79E006F17E7 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298594A6288AD79E006F17E7 /* DetailView.swift */; };
+		298594A9288AF735006F17E7 /* AlbumCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298594A8288AF735006F17E7 /* AlbumCardView.swift */; };
 		29E79C52288A846B0062CB99 /* Card3DAnimationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E79C51288A846B0062CB99 /* Card3DAnimationApp.swift */; };
 		29E79C54288A846B0062CB99 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E79C53288A846B0062CB99 /* ContentView.swift */; };
 		29E79C56288A846B0062CB99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29E79C55288A846B0062CB99 /* Assets.xcassets */; };
@@ -14,6 +18,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		298594A2288AABC8006F17E7 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		298594A4288ACBAA006F17E7 /* StackPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackPlayerView.swift; sourceTree = "<group>"; };
+		298594A6288AD79E006F17E7 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		298594A8288AF735006F17E7 /* AlbumCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCardView.swift; sourceTree = "<group>"; };
 		29E79C4E288A846B0062CB99 /* Card3DAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Card3DAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29E79C51288A846B0062CB99 /* Card3DAnimationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card3DAnimationApp.swift; sourceTree = "<group>"; };
 		29E79C53288A846B0062CB99 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -51,6 +59,8 @@
 		29E79C50288A846B0062CB99 /* Card3DAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				29E79C63288A9D260062CB99 /* Model */,
+				29E79C62288A9D220062CB99 /* View */,
 				29E79C51288A846B0062CB99 /* Card3DAnimationApp.swift */,
 				29E79C53288A846B0062CB99 /* ContentView.swift */,
 				29E79C55288A846B0062CB99 /* Assets.xcassets */,
@@ -65,6 +75,24 @@
 				29E79C58288A846B0062CB99 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		29E79C62288A9D220062CB99 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				298594A4288ACBAA006F17E7 /* StackPlayerView.swift */,
+				298594A6288AD79E006F17E7 /* DetailView.swift */,
+				298594A8288AF735006F17E7 /* AlbumCardView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		29E79C63288A9D260062CB99 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				298594A2288AABC8006F17E7 /* Album.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +167,10 @@
 			files = (
 				29E79C54288A846B0062CB99 /* ContentView.swift in Sources */,
 				29E79C52288A846B0062CB99 /* Card3DAnimationApp.swift in Sources */,
+				298594A5288ACBAA006F17E7 /* StackPlayerView.swift in Sources */,
+				298594A7288AD79E006F17E7 /* DetailView.swift in Sources */,
+				298594A9288AF735006F17E7 /* AlbumCardView.swift in Sources */,
+				298594A3288AABC8006F17E7 /* Album.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
