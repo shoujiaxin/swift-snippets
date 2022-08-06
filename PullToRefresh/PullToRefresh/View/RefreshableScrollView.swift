@@ -34,7 +34,7 @@ struct RefreshableScrollView<Content: View>: UIViewRepresentable {
         return scrollView
     }
 
-    func updateUIView(_ uiView: UIViewType, context: Context) {
+    func updateUIView(_ uiView: UIViewType, context _: Context) {
         uiView.subviews.last?.removeFromSuperview()
         setupContent(in: uiView)
     }
@@ -53,7 +53,7 @@ struct RefreshableScrollView<Content: View>: UIViewRepresentable {
             hostingVC.view.leadingAnchor.constraint(equalTo: parentView.leadingAnchor),
             hostingVC.view.trailingAnchor.constraint(equalTo: parentView.trailingAnchor),
             hostingVC.view.widthAnchor.constraint(equalTo: parentView.widthAnchor),
-            hostingVC.view.heightAnchor.constraint(greaterThanOrEqualTo: parentView.heightAnchor, constant: 1)
+            hostingVC.view.heightAnchor.constraint(greaterThanOrEqualTo: parentView.heightAnchor, constant: 1),
         ]
 
         parentView.addSubview(hostingVC.view)
