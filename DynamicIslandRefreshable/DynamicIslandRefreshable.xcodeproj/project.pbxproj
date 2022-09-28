@@ -11,6 +11,8 @@
 		29A87A7128E4A1E00036B3FE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A87A7028E4A1E00036B3FE /* ContentView.swift */; };
 		29A87A7328E4A1E10036B3FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29A87A7228E4A1E10036B3FE /* Assets.xcassets */; };
 		29A87A7628E4A1E10036B3FE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29A87A7528E4A1E10036B3FE /* Preview Assets.xcassets */; };
+		29A87A8328E4A30B0036B3FE /* CustomRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A87A8228E4A30B0036B3FE /* CustomRefreshView.swift */; };
+		29A87A8628E4A3750036B3FE /* ScrollViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A87A8528E4A3750036B3FE /* ScrollViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		29A87A7028E4A1E00036B3FE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		29A87A7228E4A1E10036B3FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		29A87A7528E4A1E10036B3FE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		29A87A8228E4A30B0036B3FE /* CustomRefreshView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomRefreshView.swift; sourceTree = "<group>"; };
+		29A87A8528E4A3750036B3FE /* ScrollViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +55,8 @@
 		29A87A6D28E4A1E00036B3FE /* DynamicIslandRefreshable */ = {
 			isa = PBXGroup;
 			children = (
+				29A87A8428E4A3650036B3FE /* ViewModel */,
+				29A87A8128E4A2FC0036B3FE /* View */,
 				29A87A6E28E4A1E00036B3FE /* DynamicIslandRefreshableApp.swift */,
 				29A87A7028E4A1E00036B3FE /* ContentView.swift */,
 				29A87A7228E4A1E10036B3FE /* Assets.xcassets */,
@@ -65,6 +71,22 @@
 				29A87A7528E4A1E10036B3FE /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		29A87A8128E4A2FC0036B3FE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				29A87A8228E4A30B0036B3FE /* CustomRefreshView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		29A87A8428E4A3650036B3FE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				29A87A8528E4A3750036B3FE /* ScrollViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +161,8 @@
 			files = (
 				29A87A7128E4A1E00036B3FE /* ContentView.swift in Sources */,
 				29A87A6F28E4A1E00036B3FE /* DynamicIslandRefreshableApp.swift in Sources */,
+				29A87A8328E4A30B0036B3FE /* CustomRefreshView.swift in Sources */,
+				29A87A8628E4A3750036B3FE /* ScrollViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
