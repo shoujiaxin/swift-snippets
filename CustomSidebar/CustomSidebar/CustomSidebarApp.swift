@@ -12,6 +12,15 @@ struct CustomSidebarApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .preferredColorScheme(.light)
         }
+        .windowStyle(.hiddenTitleBar)
+    }
+}
+
+extension NSTextField {
+    override open var focusRingType: NSFocusRingType {
+        get { .none }
+        set {}
     }
 }

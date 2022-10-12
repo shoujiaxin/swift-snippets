@@ -7,19 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		29474B5D28F71832006C1B92 /* Recent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29474B5C28F71832006C1B92 /* Recent.swift */; };
+		29474B5F28F721E3006C1B92 /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29474B5E28F721E3006C1B92 /* Analytics.swift */; };
 		298973EC28F707B300834E51 /* CustomSidebarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298973EB28F707B300834E51 /* CustomSidebarApp.swift */; };
 		298973EE28F707B300834E51 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298973ED28F707B300834E51 /* ContentView.swift */; };
 		298973F028F707B400834E51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 298973EF28F707B400834E51 /* Assets.xcassets */; };
 		298973F328F707B400834E51 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 298973F228F707B400834E51 /* Preview Assets.xcassets */; };
+		298973FD28F70B5700834E51 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298973FC28F70B5700834E51 /* Home.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		29474B5C28F71832006C1B92 /* Recent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recent.swift; sourceTree = "<group>"; };
+		29474B5E28F721E3006C1B92 /* Analytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
 		298973E828F707B300834E51 /* CustomSidebar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomSidebar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		298973EB28F707B300834E51 /* CustomSidebarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSidebarApp.swift; sourceTree = "<group>"; };
 		298973ED28F707B300834E51 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		298973EF28F707B400834E51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		298973F228F707B400834E51 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		298973F428F707B400834E51 /* CustomSidebar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CustomSidebar.entitlements; sourceTree = "<group>"; };
+		298973FC28F70B5700834E51 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +58,8 @@
 		298973EA28F707B300834E51 /* CustomSidebar */ = {
 			isa = PBXGroup;
 			children = (
+				298973FB28F70B0300834E51 /* Model */,
+				298973FA28F70AFF00834E51 /* View */,
 				298973EB28F707B300834E51 /* CustomSidebarApp.swift */,
 				298973ED28F707B300834E51 /* ContentView.swift */,
 				298973EF28F707B400834E51 /* Assets.xcassets */,
@@ -67,6 +75,23 @@
 				298973F228F707B400834E51 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		298973FA28F70AFF00834E51 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				298973FC28F70B5700834E51 /* Home.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		298973FB28F70B0300834E51 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				29474B5C28F71832006C1B92 /* Recent.swift */,
+				29474B5E28F721E3006C1B92 /* Analytics.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,7 +164,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29474B5D28F71832006C1B92 /* Recent.swift in Sources */,
 				298973EE28F707B300834E51 /* ContentView.swift in Sources */,
+				298973FD28F70B5700834E51 /* Home.swift in Sources */,
+				29474B5F28F721E3006C1B92 /* Analytics.swift in Sources */,
 				298973EC28F707B300834E51 /* CustomSidebarApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
