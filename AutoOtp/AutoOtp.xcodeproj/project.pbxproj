@@ -11,6 +11,7 @@
 		2B9714F6296ACF7500984536 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9714F5296ACF7500984536 /* ContentView.swift */; };
 		2B9714F8296ACF7600984536 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B9714F7296ACF7600984536 /* Assets.xcassets */; };
 		2B9714FB296ACF7600984536 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B9714FA296ACF7600984536 /* Preview Assets.xcassets */; };
+		2B971502296AD4F200984536 /* OTPVerificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B971501296AD4F200984536 /* OTPVerificationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		2B9714F5296ACF7500984536 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2B9714F7296ACF7600984536 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B9714FA296ACF7600984536 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2B971501296AD4F200984536 /* OTPVerificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPVerificationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 				2B9714F5296ACF7500984536 /* ContentView.swift */,
 				2B9714F7296ACF7600984536 /* Assets.xcassets */,
 				2B9714F9296ACF7600984536 /* Preview Content */,
+				2B971501296AD4F200984536 /* OTPVerificationView.swift */,
 			);
 			path = AutoOtp;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B971502296AD4F200984536 /* OTPVerificationView.swift in Sources */,
 				2B9714F6296ACF7500984536 /* ContentView.swift in Sources */,
 				2B9714F4296ACF7500984536 /* AutoOtpApp.swift in Sources */,
 			);
