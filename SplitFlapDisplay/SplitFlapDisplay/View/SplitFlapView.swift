@@ -7,20 +7,40 @@
 
 import SwiftUI
 
-struct SplitFlapView: View {
+struct SplitFlapView: View, Animatable {
     @State
     private var number: Int = 0
 
+    @State
+    private var rotation: Double = 0
+
+    var animatableData: Double {
+        return rotation
+    }
+
     var body: some View {
         VStack(spacing: 0) {
-            VStack(spacing: 0) {
-                Rectangle()
-                    .frame(width: cardWidth, height: cardHeight)
-                    .cornerRadius(cardCornerRadius, corners: [.topLeft, .topRight])
+            ZStack {
+                VStack(spacing: 0) {
+                    Rectangle()
+                        .frame(width: cardWidth, height: cardHeight)
+                        .cornerRadius(cardCornerRadius, corners: [.topLeft, .topRight])
 
-                Color.clear
-                    .frame(width: cardWidth, height: cardSpacing)
+                    Color.clear
+                        .frame(width: cardWidth, height: cardSpacing)
+                }
+
+                VStack(spacing: 0) {
+                    Rectangle()
+                        .frame(width: cardWidth, height: cardHeight)
+                        .cornerRadius(cardCornerRadius, corners: [.topLeft, .topRight])
+
+                    Color.clear
+                        .frame(width: cardWidth, height: cardSpacing)
+                }
+                .rotation3DEffect(.degrees(rotation), axis: (-1, 0, 0), anchor: .bottom, perspective: 0.25)
             }
+            .zIndex(1)
 
             VStack(spacing: 0) {
                 Color.clear
@@ -31,6 +51,15 @@ struct SplitFlapView: View {
                     .cornerRadius(cardCornerRadius, corners: [.bottomLeft, .bottomRight])
             }
         }
+        .onTapGesture {
+            withAnimation(.easeInOut(duration: 1)) {
+                rotation = 180
+            }
+
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.1) {
+                rotation = 0
+            }
+        }
     }
 
     // MARK: - Constants
@@ -38,7 +67,7 @@ struct SplitFlapView: View {
     private let cardWidth: CGFloat = 200
     private let cardHeight: CGFloat = 160
     private let cardCornerRadius: CGFloat = 20
-    private let cardSpacing: CGFloat = 3
+    private let cardSpacing: CGFloat = 2
 }
 
 struct SplitFlapView_Previews: PreviewProvider {
