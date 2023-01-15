@@ -41,6 +41,14 @@ struct SplitFlapView: View, Animatable {
                 Rectangle()
                     .frame(width: cardWidth, height: cardHeight)
                     .cornerRadius(cardCornerRadius, corners: [.topLeft, .topRight])
+                    .overlay {
+                        Color.white
+                            .frame(width: cardWidth, height: cardHeight)
+                            .mask {
+                                text(of: number + 1)
+                                    .offset(y: cardHeight / 2 + cardSpacing)
+                            }
+                    }
 
                 Color.clear
                     .frame(width: cardWidth, height: cardSpacing)
