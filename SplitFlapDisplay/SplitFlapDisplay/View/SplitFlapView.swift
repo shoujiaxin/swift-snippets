@@ -8,19 +8,16 @@
 import SwiftUI
 
 struct SplitFlapView: View {
-    private let text: String
-
-    init(_ text: String) {
-        self.text = text
-    }
+    @State
+    private var number: Int = 0
 
     var body: some View {
-        Text(text)
+        Text("\(number)")
     }
 }
 
 struct SplitFlapView_Previews: PreviewProvider {
     static var previews: some View {
-        SplitFlapView("Hello")
+        SplitFlapView()
     }
 }
