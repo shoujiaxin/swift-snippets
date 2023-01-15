@@ -42,14 +42,7 @@ struct SplitFlapView: View, Animatable {
             }
             .zIndex(1)
 
-            VStack(spacing: 0) {
-                Color.clear
-                    .frame(width: cardWidth, height: cardSpacing)
-
-                Rectangle()
-                    .frame(width: cardWidth, height: cardHeight)
-                    .cornerRadius(cardCornerRadius, corners: [.bottomLeft, .bottomRight])
-            }
+            bottomSplitCard
         }
         .onTapGesture {
             withAnimation(.easeInOut(duration: 1)) {
@@ -59,6 +52,17 @@ struct SplitFlapView: View, Animatable {
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.1) {
                 rotation = 0
             }
+        }
+    }
+
+    private var bottomSplitCard: some View {
+        VStack(spacing: 0) {
+            Color.clear
+                .frame(width: cardWidth, height: cardSpacing)
+
+            Rectangle()
+                .frame(width: cardWidth, height: cardHeight)
+                .cornerRadius(cardCornerRadius, corners: [.bottomLeft, .bottomRight])
         }
     }
 
