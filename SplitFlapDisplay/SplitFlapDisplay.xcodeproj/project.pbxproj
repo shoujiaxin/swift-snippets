@@ -11,6 +11,8 @@
 		2B694DED2973CAAB00230091 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B694DEC2973CAAB00230091 /* ContentView.swift */; };
 		2B694DEF2973CAAC00230091 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B694DEE2973CAAC00230091 /* Assets.xcassets */; };
 		2B694DF22973CAAC00230091 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B694DF12973CAAC00230091 /* Preview Assets.xcassets */; };
+		2B694DF92973CC1700230091 /* SplitFlapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B694DF82973CC1700230091 /* SplitFlapView.swift */; };
+		2B694DFD2973D46B00230091 /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B694DFC2973D46B00230091 /* RoundedCorner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		2B694DEC2973CAAB00230091 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2B694DEE2973CAAC00230091 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B694DF12973CAAC00230091 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2B694DF82973CC1700230091 /* SplitFlapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitFlapView.swift; sourceTree = "<group>"; };
+		2B694DFC2973D46B00230091 /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +55,8 @@
 		2B694DE92973CAAB00230091 /* SplitFlapDisplay */ = {
 			isa = PBXGroup;
 			children = (
+				2B694DFB2973D45D00230091 /* ViewModifier */,
+				2B694DFA2973D45600230091 /* View */,
 				2B694DEA2973CAAB00230091 /* SplitFlapDisplayApp.swift */,
 				2B694DEC2973CAAB00230091 /* ContentView.swift */,
 				2B694DEE2973CAAC00230091 /* Assets.xcassets */,
@@ -65,6 +71,22 @@
 				2B694DF12973CAAC00230091 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2B694DFA2973D45600230091 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2B694DF82973CC1700230091 /* SplitFlapView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2B694DFB2973D45D00230091 /* ViewModifier */ = {
+			isa = PBXGroup;
+			children = (
+				2B694DFC2973D46B00230091 /* RoundedCorner.swift */,
+			);
+			path = ViewModifier;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +159,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B694DFD2973D46B00230091 /* RoundedCorner.swift in Sources */,
 				2B694DED2973CAAB00230091 /* ContentView.swift in Sources */,
 				2B694DEB2973CAAB00230091 /* SplitFlapDisplayApp.swift in Sources */,
+				2B694DF92973CC1700230091 /* SplitFlapView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
