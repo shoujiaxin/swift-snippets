@@ -12,8 +12,33 @@ struct SplitFlapView: View {
     private var number: Int = 0
 
     var body: some View {
-        Text("\(number)")
+        VStack(spacing: 0) {
+            VStack(spacing: 0) {
+                Rectangle()
+                    .frame(width: cardWidth, height: cardHeight)
+                    .cornerRadius(cardCornerRadius, corners: [.topLeft, .topRight])
+
+                Color.clear
+                    .frame(width: cardWidth, height: cardSpacing)
+            }
+
+            VStack(spacing: 0) {
+                Color.clear
+                    .frame(width: cardWidth, height: cardSpacing)
+
+                Rectangle()
+                    .frame(width: cardWidth, height: cardHeight)
+                    .cornerRadius(cardCornerRadius, corners: [.bottomLeft, .bottomRight])
+            }
+        }
     }
+
+    // MARK: - Constants
+
+    private let cardWidth: CGFloat = 200
+    private let cardHeight: CGFloat = 160
+    private let cardCornerRadius: CGFloat = 20
+    private let cardSpacing: CGFloat = 3
 }
 
 struct SplitFlapView_Previews: PreviewProvider {
