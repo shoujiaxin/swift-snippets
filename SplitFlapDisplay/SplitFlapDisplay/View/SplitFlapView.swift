@@ -20,27 +20,7 @@ struct SplitFlapView: View, Animatable {
 
     var body: some View {
         VStack(spacing: 0) {
-            ZStack {
-                VStack(spacing: 0) {
-                    Rectangle()
-                        .frame(width: cardWidth, height: cardHeight)
-                        .cornerRadius(cardCornerRadius, corners: [.topLeft, .topRight])
-
-                    Color.clear
-                        .frame(width: cardWidth, height: cardSpacing)
-                }
-
-                VStack(spacing: 0) {
-                    Rectangle()
-                        .frame(width: cardWidth, height: cardHeight)
-                        .cornerRadius(cardCornerRadius, corners: [.topLeft, .topRight])
-
-                    Color.clear
-                        .frame(width: cardWidth, height: cardSpacing)
-                }
-                .rotation3DEffect(.degrees(rotation), axis: (-1, 0, 0), anchor: .bottom, perspective: 0.25)
-            }
-            .zIndex(1)
+            topSplitCard
 
             bottomSplitCard
         }
@@ -53,6 +33,30 @@ struct SplitFlapView: View, Animatable {
                 rotation = 0
             }
         }
+    }
+
+    private var topSplitCard: some View {
+        ZStack {
+            VStack(spacing: 0) {
+                Rectangle()
+                    .frame(width: cardWidth, height: cardHeight)
+                    .cornerRadius(cardCornerRadius, corners: [.topLeft, .topRight])
+
+                Color.clear
+                    .frame(width: cardWidth, height: cardSpacing)
+            }
+
+            VStack(spacing: 0) {
+                Rectangle()
+                    .frame(width: cardWidth, height: cardHeight)
+                    .cornerRadius(cardCornerRadius, corners: [.topLeft, .topRight])
+
+                Color.clear
+                    .frame(width: cardWidth, height: cardSpacing)
+            }
+            .rotation3DEffect(.degrees(rotation), axis: (-1, 0, 0), anchor: .bottom, perspective: 0.25)
+        }
+        .zIndex(1)
     }
 
     private var bottomSplitCard: some View {
