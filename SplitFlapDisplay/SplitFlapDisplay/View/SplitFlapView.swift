@@ -50,6 +50,14 @@ struct SplitFlapView: View, Animatable {
                 Rectangle()
                     .frame(width: cardWidth, height: cardHeight)
                     .cornerRadius(cardCornerRadius, corners: [.topLeft, .topRight])
+                    .overlay {
+                        Color.white
+                            .frame(width: cardWidth, height: cardHeight)
+                            .mask {
+                                text(of: number)
+                                    .offset(y: cardHeight / 2 + cardSpacing)
+                            }
+                    }
 
                 Color.clear
                     .frame(width: cardWidth, height: cardSpacing)
@@ -67,7 +75,20 @@ struct SplitFlapView: View, Animatable {
             Rectangle()
                 .frame(width: cardWidth, height: cardHeight)
                 .cornerRadius(cardCornerRadius, corners: [.bottomLeft, .bottomRight])
+                .overlay {
+                    Color.white
+                        .frame(width: cardWidth, height: cardHeight)
+                        .mask {
+                            text(of: number)
+                                .offset(y: -(cardHeight / 2 + cardSpacing))
+                        }
+                }
         }
+    }
+
+    private func text(of number: Int) -> some View {
+        Text(String(number))
+            .font(.system(size: fontSize, weight: .black))
     }
 
     // MARK: - Constants
@@ -76,6 +97,8 @@ struct SplitFlapView: View, Animatable {
     private let cardHeight: CGFloat = 160
     private let cardCornerRadius: CGFloat = 20
     private let cardSpacing: CGFloat = 2
+
+    private let fontSize: CGFloat = 200
 }
 
 struct SplitFlapView_Previews: PreviewProvider {
