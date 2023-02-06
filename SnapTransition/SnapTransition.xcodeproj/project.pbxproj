@@ -7,18 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		29A7007F2992AC0400937348 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A7007E2992AC0400937348 /* DetailView.swift */; };
+		29A700812992B2BC00937348 /* CustomVideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A700802992B2BC00937348 /* CustomVideoPlayer.swift */; };
 		2B2B0F42299119160079C0C5 /* SnapTransitionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2B0F41299119160079C0C5 /* SnapTransitionApp.swift */; };
 		2B2B0F44299119160079C0C5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2B0F43299119160079C0C5 /* ContentView.swift */; };
 		2B2B0F46299119170079C0C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B2B0F45299119170079C0C5 /* Assets.xcassets */; };
 		2B2B0F49299119170079C0C5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B2B0F48299119170079C0C5 /* Preview Assets.xcassets */; };
+		2B2B0F5529911DAB0079C0C5 /* VideoFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2B0F5429911DAB0079C0C5 /* VideoFile.swift */; };
+		2B2B0F562991234B0079C0C5 /* Video1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2B2B0F5229911AB60079C0C5 /* Video1.mp4 */; };
+		2B2B0F572991234B0079C0C5 /* Video2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2B2B0F5329911BC00079C0C5 /* Video2.mp4 */; };
+		2B2B0F592991236F0079C0C5 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2B0F582991236F0079C0C5 /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		29A7007E2992AC0400937348 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		29A700802992B2BC00937348 /* CustomVideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomVideoPlayer.swift; sourceTree = "<group>"; };
 		2B2B0F3E299119160079C0C5 /* SnapTransition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapTransition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B2B0F41299119160079C0C5 /* SnapTransitionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapTransitionApp.swift; sourceTree = "<group>"; };
 		2B2B0F43299119160079C0C5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2B2B0F45299119170079C0C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B2B0F48299119170079C0C5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2B2B0F5229911AB60079C0C5 /* Video1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Video1.mp4; sourceTree = "<group>"; };
+		2B2B0F5329911BC00079C0C5 /* Video2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Video2.mp4; sourceTree = "<group>"; };
+		2B2B0F5429911DAB0079C0C5 /* VideoFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoFile.swift; sourceTree = "<group>"; };
+		2B2B0F582991236F0079C0C5 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +63,9 @@
 		2B2B0F40299119160079C0C5 /* SnapTransition */ = {
 			isa = PBXGroup;
 			children = (
+				2B2B0F4F299119B20079C0C5 /* View */,
+				2B2B0F50299119B60079C0C5 /* Model */,
+				2B2B0F51299119BA0079C0C5 /* Resource */,
 				2B2B0F41299119160079C0C5 /* SnapTransitionApp.swift */,
 				2B2B0F43299119160079C0C5 /* ContentView.swift */,
 				2B2B0F45299119170079C0C5 /* Assets.xcassets */,
@@ -65,6 +80,33 @@
 				2B2B0F48299119170079C0C5 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2B2B0F4F299119B20079C0C5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2B2B0F582991236F0079C0C5 /* CardView.swift */,
+				29A7007E2992AC0400937348 /* DetailView.swift */,
+				29A700802992B2BC00937348 /* CustomVideoPlayer.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2B2B0F50299119B60079C0C5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2B2B0F5429911DAB0079C0C5 /* VideoFile.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2B2B0F51299119BA0079C0C5 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				2B2B0F5229911AB60079C0C5 /* Video1.mp4 */,
+				2B2B0F5329911BC00079C0C5 /* Video2.mp4 */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +167,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B2B0F562991234B0079C0C5 /* Video1.mp4 in Resources */,
+				2B2B0F572991234B0079C0C5 /* Video2.mp4 in Resources */,
 				2B2B0F49299119170079C0C5 /* Preview Assets.xcassets in Resources */,
 				2B2B0F46299119170079C0C5 /* Assets.xcassets in Resources */,
 			);
@@ -137,8 +181,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B2B0F5529911DAB0079C0C5 /* VideoFile.swift in Sources */,
 				2B2B0F44299119160079C0C5 /* ContentView.swift in Sources */,
+				2B2B0F592991236F0079C0C5 /* CardView.swift in Sources */,
+				29A7007F2992AC0400937348 /* DetailView.swift in Sources */,
 				2B2B0F42299119160079C0C5 /* SnapTransitionApp.swift in Sources */,
+				29A700812992B2BC00937348 /* CustomVideoPlayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
