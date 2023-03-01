@@ -11,6 +11,7 @@
 		29E7D26429AFA21A00A71CC4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E7D26329AFA21A00A71CC4 /* ContentView.swift */; };
 		29E7D26629AFA21B00A71CC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29E7D26529AFA21B00A71CC4 /* Assets.xcassets */; };
 		29E7D26929AFA21B00A71CC4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29E7D26829AFA21B00A71CC4 /* Preview Assets.xcassets */; };
+		29E7D27029AFA57700A71CC4 /* CustomTFKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E7D26F29AFA57700A71CC4 /* CustomTFKeyboard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		29E7D26329AFA21A00A71CC4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		29E7D26529AFA21B00A71CC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		29E7D26829AFA21B00A71CC4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		29E7D26F29AFA57700A71CC4 /* CustomTFKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTFKeyboard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 				29E7D26329AFA21A00A71CC4 /* ContentView.swift */,
 				29E7D26529AFA21B00A71CC4 /* Assets.xcassets */,
 				29E7D26729AFA21B00A71CC4 /* Preview Content */,
+				29E7D26F29AFA57700A71CC4 /* CustomTFKeyboard.swift */,
 			);
 			path = CustomKeyboard;
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				29E7D26429AFA21A00A71CC4 /* ContentView.swift in Sources */,
+				29E7D27029AFA57700A71CC4 /* CustomTFKeyboard.swift in Sources */,
 				29E7D26229AFA21A00A71CC4 /* CustomKeyboardApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
