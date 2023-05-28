@@ -26,7 +26,8 @@ struct DetailView: View {
             CardView(videoFile: $videoFile,
                      isExpanded: $isExpanded,
                      animationID: animationID,
-                     isDetailView: true) {
+                     isDetailView: true)
+            {
                 overlayView
                     .padding(.top, safeArea.top)
                     .padding(.bottom, safeArea.bottom)
