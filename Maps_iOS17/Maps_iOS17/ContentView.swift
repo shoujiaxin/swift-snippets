@@ -24,7 +24,25 @@ struct ContentView: View {
     private var cameraPosition: MapCameraPosition = .region(.myRegion)
 
     var body: some View {
-        Map(position: $cameraPosition)
+        Map(position: $cameraPosition) {
+            Annotation("Apple Park", coordinate: .myLocation) {
+                ZStack {
+                    Image(systemName: "applelogo")
+                        .font(.title3)
+
+                    Image(systemName: "square")
+                        .font(.largeTitle)
+                }
+            }
+            .annotationTitles(.hidden)
+
+            UserAnnotation()
+        }
+        .mapControls {
+            MapCompass()
+
+            MapUserLocationButton()
+        }
     }
 }
 
