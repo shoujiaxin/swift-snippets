@@ -32,6 +32,9 @@ struct ContentView: View {
     @State
     private var showSearchBar: Bool = false
 
+    @State
+    private var searchResults: [MKMapItem] = []
+
     var body: some View {
         NavigationStack {
             Map(position: $cameraPosition, scope: locationScope) {
@@ -45,6 +48,11 @@ struct ContentView: View {
                     }
                 }
                 .annotationTitles(.hidden)
+
+                ForEach(searchResults, id: \.self) { mapItem in
+                    let placemark = mapItem.placemark
+                    Marker(placemark.name ?? "Place", coordinate: placemark.coordinate)
+                }
 
                 UserAnnotation()
             }
@@ -66,6 +74,23 @@ struct ContentView: View {
             .toolbarBackground(.visible, for: .navigationBar)
             .toolbarBackground(.ultraThinMaterial, for: .navigationBar)
         }
+        .onSubmit(of: .search) {
+            Task {
+                guard !searchText.isEmpty else {
+                    return
+                }
+                await searchPlaces()
+            }
+        }
+    }
+
+    private func searchPlaces() async {
+        let request = MKLocalSearch.Request()
+        request.naturalLanguageQuery = searchText
+        request.region = .myRegion
+
+        let results = try? await MKLocalSearch(request: request).start()
+        searchResults = results?.mapItems ?? []
     }
 }
 
