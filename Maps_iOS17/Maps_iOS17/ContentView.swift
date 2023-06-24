@@ -9,8 +9,8 @@ import MapKit
 import SwiftUI
 
 extension CLLocationCoordinate2D {
-    static let myLocation: CLLocationCoordinate2D = .init(latitude: 37.3346,
-                                                          longitude: -122.0090)
+    static let myLocation: CLLocationCoordinate2D = .init(latitude: 31.2398,
+                                                          longitude: 121.4992)
 }
 
 extension MKCoordinateRegion {
@@ -35,9 +35,15 @@ struct ContentView: View {
     @State
     private var searchResults: [MKMapItem] = []
 
+    @State
+    private var mapSelection: MKMapItem? = nil
+
+    @State
+    private var showDetails: Bool = false
+
     var body: some View {
         NavigationStack {
-            Map(position: $cameraPosition, scope: locationScope) {
+            Map(position: $cameraPosition, selection: $mapSelection, scope: locationScope) {
                 Annotation("Apple Park", coordinate: .myLocation) {
                     ZStack {
                         Image(systemName: "applelogo")
@@ -52,6 +58,7 @@ struct ContentView: View {
                 ForEach(searchResults, id: \.self) { mapItem in
                     let placemark = mapItem.placemark
                     Marker(placemark.name ?? "Place", coordinate: placemark.coordinate)
+                        .tint(.blue)
                 }
 
                 UserAnnotation()
@@ -73,6 +80,12 @@ struct ContentView: View {
             .searchable(text: $searchText, isPresented: $showSearchBar)
             .toolbarBackground(.visible, for: .navigationBar)
             .toolbarBackground(.ultraThinMaterial, for: .navigationBar)
+            .sheet(isPresented: $showDetails) {
+                mapDetails
+                    .presentationDetents([.height(300)])
+                    .presentationBackgroundInteraction(.enabled(upThrough: .height(300)))
+                    .interactiveDismissDisabled(true)
+            }
         }
         .onSubmit(of: .search) {
             Task {
@@ -82,6 +95,19 @@ struct ContentView: View {
                 await searchPlaces()
             }
         }
+        .onChange(of: showSearchBar, initial: false) { _, newValue in
+            if !newValue {
+                searchResults.removeAll(keepingCapacity: false)
+            }
+        }
+        .onChange(of: mapSelection) { _, newValue in
+            showDetails = newValue != nil
+        }
+    }
+
+    @ViewBuilder
+    private var mapDetails: some View {
+        VStack(spacing: 15) {}
     }
 
     private func searchPlaces() async {
