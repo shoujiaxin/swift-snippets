@@ -41,6 +41,9 @@ struct ContentView: View {
     @State
     private var showDetails: Bool = false
 
+    @State
+    private var lookAroundScene: MKLookAroundScene?
+
     var body: some View {
         NavigationStack {
             Map(position: $cameraPosition, selection: $mapSelection, scope: locationScope) {
@@ -84,6 +87,7 @@ struct ContentView: View {
                 mapDetails
                     .presentationDetents([.height(300)])
                     .presentationBackgroundInteraction(.enabled(upThrough: .height(300)))
+                    .presentationCornerRadius(25)
                     .interactiveDismissDisabled(true)
             }
         }
@@ -98,6 +102,7 @@ struct ContentView: View {
         .onChange(of: showSearchBar, initial: false) { _, newValue in
             if !newValue {
                 searchResults.removeAll(keepingCapacity: false)
+                showDetails = false
             }
         }
         .onChange(of: mapSelection) { _, newValue in
@@ -107,7 +112,24 @@ struct ContentView: View {
 
     @ViewBuilder
     private var mapDetails: some View {
-        VStack(spacing: 15) {}
+        VStack(spacing: 15) {
+            ZStack {
+                if lookAroundScene == nil {
+                    ContentUnavailableView("No Preview Available", image: "eye.slash")
+                } else {
+                    LookAroundPreview(scene: $lookAroundScene)
+                }
+            }
+            .frame(height: 200)
+            .clipShape(.rect(cornerRadius: 15))
+
+            Button("Get Directions") {}
+                .foregroundStyle(.white)
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 12)
+                .background(.blue.gradient, in: .rect(cornerRadius: 15))
+        }
+        .padding(15)
     }
 
     private func searchPlaces() async {
