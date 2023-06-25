@@ -107,6 +107,7 @@ struct ContentView: View {
         }
         .onChange(of: mapSelection) { _, newValue in
             showDetails = newValue != nil
+            fetchLookAroundPreview()
         }
     }
 
@@ -115,7 +116,7 @@ struct ContentView: View {
         VStack(spacing: 15) {
             ZStack {
                 if lookAroundScene == nil {
-                    ContentUnavailableView("No Preview Available", image: "eye.slash")
+                    ContentUnavailableView("No Preview Available", systemImage: "eye.slash")
                 } else {
                     LookAroundPreview(scene: $lookAroundScene)
                 }
@@ -139,6 +140,16 @@ struct ContentView: View {
 
         let results = try? await MKLocalSearch(request: request).start()
         searchResults = results?.mapItems ?? []
+    }
+
+    private func fetchLookAroundPreview() {
+        if let mapSelection {
+            lookAroundScene = nil
+            Task {
+                let request = MKLookAroundSceneRequest(mapItem: mapSelection)
+                lookAroundScene = try? await request.scene
+            }
+        }
     }
 }
 
