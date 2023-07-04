@@ -55,9 +55,9 @@
 			children = (
 				29E7D26129AFA21A00A71CC4 /* CustomKeyboardApp.swift */,
 				29E7D26329AFA21A00A71CC4 /* ContentView.swift */,
+				29E7D26F29AFA57700A71CC4 /* CustomTFKeyboard.swift */,
 				29E7D26529AFA21B00A71CC4 /* Assets.xcassets */,
 				29E7D26729AFA21B00A71CC4 /* Preview Content */,
-				29E7D26F29AFA57700A71CC4 /* CustomTFKeyboard.swift */,
 			);
 			path = CustomKeyboard;
 			sourceTree = "<group>";

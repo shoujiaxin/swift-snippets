@@ -55,9 +55,9 @@
 			children = (
 				2B9714F3296ACF7500984536 /* AutoOtpApp.swift */,
 				2B9714F5296ACF7500984536 /* ContentView.swift */,
+				2B971501296AD4F200984536 /* OTPVerificationView.swift */,
 				2B9714F7296ACF7600984536 /* Assets.xcassets */,
 				2B9714F9296ACF7600984536 /* Preview Content */,
-				2B971501296AD4F200984536 /* OTPVerificationView.swift */,
 			);
 			path = AutoOtp;
 			sourceTree = "<group>";

@@ -55,7 +55,6 @@
 			isa = PBXGroup;
 			children = (
 				2B971521296AD88C00984536 /* Model */,
-				2B971520296AD88900984536 /* View */,
 				2B97150F296AD71D00984536 /* AnimatedColorPickerApp.swift */,
 				2B971511296AD71D00984536 /* ContentView.swift */,
 				2B971513296AD71E00984536 /* Assets.xcassets */,
@@ -71,13 +70,6 @@
 				2B971516296AD71E00984536 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		2B971520296AD88900984536 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		2B971521296AD88C00984536 /* Model */ = {
