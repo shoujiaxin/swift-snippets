@@ -15,6 +15,7 @@ struct Home: View {
         VStack(alignment: .leading, spacing: 0) {
             headerView
         }
+        .vSpacing(.top)
     }
 
     private var headerView: some View {
@@ -27,7 +28,15 @@ struct Home: View {
                     .foregroundStyle(.gray)
             }
             .font(.title.bold())
+
+            Text(currentDate.formatted(date: .complete, time: .omitted))
+                .font(.callout)
+                .fontWeight(.semibold)
+                .textScale(.secondary)
+                .foregroundStyle(.gray)
         }
+        .padding(15)
+        .hSpacing(.leading)
     }
 }
 
