@@ -9,18 +9,22 @@
 /* Begin PBXBuildFile section */
 		294D4BF72A7FDC3000A4AC21 /* Task_ManagementApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294D4BF62A7FDC3000A4AC21 /* Task_ManagementApp.swift */; };
 		294D4BF92A7FDC3000A4AC21 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294D4BF82A7FDC3000A4AC21 /* ContentView.swift */; };
-		294D4BFB2A7FDC3000A4AC21 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294D4BFA2A7FDC3000A4AC21 /* Item.swift */; };
 		294D4BFD2A7FDC3300A4AC21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 294D4BFC2A7FDC3300A4AC21 /* Assets.xcassets */; };
 		294D4C002A7FDC3300A4AC21 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 294D4BFF2A7FDC3300A4AC21 /* Preview Assets.xcassets */; };
+		294D4C082A7FDC7C00A4AC21 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294D4C072A7FDC7C00A4AC21 /* Task.swift */; };
+		294D4C0A2A7FDE4D00A4AC21 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294D4C092A7FDE4D00A4AC21 /* Extensions.swift */; };
+		294D4C102A7FE0F500A4AC21 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294D4C0F2A7FE0F500A4AC21 /* Home.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		294D4BF32A7FDC3000A4AC21 /* Task Management.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Task Management.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		294D4BF62A7FDC3000A4AC21 /* Task_ManagementApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task_ManagementApp.swift; sourceTree = "<group>"; };
 		294D4BF82A7FDC3000A4AC21 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		294D4BFA2A7FDC3000A4AC21 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		294D4BFC2A7FDC3300A4AC21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		294D4BFF2A7FDC3300A4AC21 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		294D4C072A7FDC7C00A4AC21 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		294D4C092A7FDE4D00A4AC21 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		294D4C0F2A7FE0F500A4AC21 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,9 +57,11 @@
 		294D4BF52A7FDC3000A4AC21 /* Task Management */ = {
 			isa = PBXGroup;
 			children = (
+				294D4C092A7FDE4D00A4AC21 /* Extensions.swift */,
+				294D4C062A7FDC7600A4AC21 /* Model */,
+				294D4C0C2A7FE0D600A4AC21 /* View */,
 				294D4BF62A7FDC3000A4AC21 /* Task_ManagementApp.swift */,
 				294D4BF82A7FDC3000A4AC21 /* ContentView.swift */,
-				294D4BFA2A7FDC3000A4AC21 /* Item.swift */,
 				294D4BFC2A7FDC3300A4AC21 /* Assets.xcassets */,
 				294D4BFE2A7FDC3300A4AC21 /* Preview Content */,
 			);
@@ -68,6 +74,22 @@
 				294D4BFF2A7FDC3300A4AC21 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		294D4C062A7FDC7600A4AC21 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				294D4C072A7FDC7C00A4AC21 /* Task.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		294D4C0C2A7FE0D600A4AC21 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				294D4C0F2A7FE0F500A4AC21 /* Home.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,8 +162,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				294D4C0A2A7FDE4D00A4AC21 /* Extensions.swift in Sources */,
+				294D4C082A7FDC7C00A4AC21 /* Task.swift in Sources */,
 				294D4BF92A7FDC3000A4AC21 /* ContentView.swift in Sources */,
-				294D4BFB2A7FDC3000A4AC21 /* Item.swift in Sources */,
+				294D4C102A7FE0F500A4AC21 /* Home.swift in Sources */,
 				294D4BF72A7FDC3000A4AC21 /* Task_ManagementApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
