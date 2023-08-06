@@ -22,7 +22,7 @@ struct Home: View {
         VStack(alignment: .leading, spacing: 6) {
             HStack(spacing: 5) {
                 Text(currentDate.formatted(.dateTime.month()))
-                    .foregroundStyle(Color.accentColor)
+                    .foregroundStyle(.darkBlue)
 
                 Text(currentDate.formatted(.dateTime.year()))
                     .foregroundStyle(.gray)
@@ -35,8 +35,16 @@ struct Home: View {
                 .textScale(.secondary)
                 .foregroundStyle(.gray)
         }
-        .padding(15)
         .hSpacing(.leading)
+        .overlay(alignment: .topTrailing) {
+            Button {} label: {
+                Image(systemName: "person.circle")
+                    .resizable()
+                    .frame(width: 45, height: 45)
+            }
+        }
+        .padding(15)
+        .background(.white)
     }
 }
 
