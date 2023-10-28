@@ -8,8 +8,19 @@
 import SwiftUI
 
 extension Date {
+    struct WeekDay: Identifiable {
+        let id: UUID = .init()
+
+        let date: Date
+    }
+
     static func updateHour(_ value: Int) -> Date {
         Calendar.current.date(byAdding: .hour, value: value, to: .now) ?? .now
+    }
+
+    func fetchWeek(_ date: Date = .now) -> [WeekDay] {
+        let calendar = Calendar.current
+        let startOfDate = calendar.startOfDay(for: date)
     }
 }
 
