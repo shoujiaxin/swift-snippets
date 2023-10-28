@@ -22,11 +22,9 @@ struct VideoFile: Identifiable {
     var isPlaying: Bool = false
 }
 
-let files: [VideoFile] = {
-    [
-        "Video1",
-        "Video2",
-    ]
-    .compactMap { Bundle.main.url(forResource: $0, withExtension: "mp4") }
-    .map { .init(url: $0, player: .init(url: $0)) }
-}()
+let files: [VideoFile] = [
+    "Video1",
+    "Video2",
+]
+.compactMap { Bundle.main.url(forResource: $0, withExtension: "mp4") }
+.map { .init(url: $0, player: .init(url: $0)) }
