@@ -57,7 +57,7 @@ struct Home: View {
 
     @ViewBuilder
     private var artwork: some View {
-        let height = self.size.height * 0.45
+        let height = size.height * 0.45
 
         GeometryReader { proxy in
             let size = proxy.size

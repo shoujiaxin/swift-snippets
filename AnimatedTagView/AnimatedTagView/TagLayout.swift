@@ -37,7 +37,7 @@ struct TagLayout: Layout {
         let maxWidth = bounds.width
         let rows = generateRows(maxWidth: maxWidth, proposal: proposal, subviews: subviews)
 
-        rows.forEach { row in
+        for row in rows {
             let contentWidth: CGFloat = row.reduce(.zero) { partialResult, view in
                 let width = view.sizeThatFits(proposal).width
                 if view == row.last {
@@ -60,7 +60,7 @@ struct TagLayout: Layout {
                 origin.x = bounds.origin.x
             }
 
-            row.forEach { view in
+            for view in row {
                 let viewSize = view.sizeThatFits(proposal)
                 view.place(at: origin, proposal: proposal)
                 origin.x += viewSize.width + spacing
@@ -76,7 +76,7 @@ struct TagLayout: Layout {
 
         var origin: CGPoint = .zero
 
-        subviews.forEach { view in
+        for view in subviews {
             let viewSize = view.sizeThatFits(proposal)
 
             if origin.x + viewSize.width + spacing > maxWidth {

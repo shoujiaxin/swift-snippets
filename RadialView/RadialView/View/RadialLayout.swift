@@ -29,7 +29,7 @@ struct RadialLayout<Content, Item, ID>: View where
     private var lastDragRotation: Angle = .zero
 
     @State
-    private var activeIndex: Int = 0
+    private var activeIndex = 0
 
     init(items: Item,
          id: KeyPath<Item.Element, ID>,

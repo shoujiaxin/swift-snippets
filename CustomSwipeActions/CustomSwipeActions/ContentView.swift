@@ -116,7 +116,7 @@ struct SwipeAction<Content>: View where Content: View {
     let viewID: UUID = .init()
 
     @State
-    private var isEnabled: Bool = true
+    private var isEnabled = true
 
     @State
     private var scrollOffset: CGFloat = .zero

@@ -104,7 +104,7 @@ struct TagView: Layout {
         var row: ([LayoutSubviews.Element], Double) = ([], 0.0)
         var rows: [([LayoutSubviews.Element], Double)] = []
 
-        subviews.forEach { view in
+        for view in subviews {
             let viewSize = view.sizeThatFits(proposal)
             if origin.x + viewSize.width + spacing > maxWidth {
                 row.1 = bounds.maxX - origin.x + bounds.minX + spacing
@@ -128,14 +128,14 @@ struct TagView: Layout {
 
         origin = bounds.origin
 
-        rows.forEach { row in
+        for row in rows {
             switch alignment {
             case .leading: origin.x = bounds.minX
             case .trailing: origin.x = row.1
             case .center: origin.x = row.1 / 2
             default: break
             }
-            row.0.forEach { view in
+            for view in row.0 {
                 let viewSize = view.sizeThatFits(proposal)
                 view.place(at: origin, proposal: proposal)
                 origin.x += viewSize.width + spacing
